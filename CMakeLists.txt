@@ -21,7 +21,7 @@ add_compile_definitions(MODENGINE_CRASH_REPORT_URL="${MODENGINE_CRASH_REPORT_URL
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
     if (CMAKE_CXX_SIMULATE_ID STREQUAL "MSVC")
-        add_compile_options("$<$<COMPILE_LANGUAGE:CXX>:-Wno-microsoft-cast;-Wno-c++98-compat;-Wno-c++98-compat-pedantic;/GX;/clang:--system-header-prefix=${VCPKG_INCLUDE_DIR};/clang:--system-header-prefix=${CMAKE_CURRENT_SOURCE_DIR}/third-party>")
+        add_compile_options("$<$<COMPILE_LANGUAGE:CXX>:-Wno-microsoft-cast;-fexceptions;-Wexceptions-Wno-c++98-compat;-Wno-c++98-compat-pedantic;/GX;/clang:--system-header-prefix=${VCPKG_INCLUDE_DIR};/clang:--system-header-prefix=${CMAKE_CURRENT_SOURCE_DIR}/third-party>")
     else ()
         message(FATAL_ERROR "Clang frontend must be MSVC. Current frontend '${CMAKE_CXX_SIMULATE_ID}' is unsupported")
     endif ()

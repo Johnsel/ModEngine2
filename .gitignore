@@ -370,3 +370,7 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+ScyllaHide.7z
+
+# Vcpkg auto generated
+vcpkg_installed/**
